@@ -48,7 +48,6 @@ import random
 
 lista_palavras = ["batata","gnar","mialgia"]
 palavra_secreta = random.sample(lista_palavras,1)[0].lower()
-
 # Mostrar palavra secreta com espaços em branco
 resposta_str = ""
 for i in range(len(palavra_secreta)):
@@ -56,24 +55,23 @@ for i in range(len(palavra_secreta)):
 resposta_list = list(resposta_str)
 print("Aqui vai uma dica! A palavra secreta tem {} letras!\n{}".format(len(palavra_secreta),resposta_str))
 
-i=0
 falha = 0
-historico_tentativas = []
+#historico_tentativas = []
 while falha < 5:
     tentativa = str(input("Escreva uma letra: ")).lower() #
     tentativa = tentativa[0] # caso o utilizador escreva mais que uma letra, apenas utilizar a primeira letra
     resposta_old = "".join(resposta_list) # cria a variavel que vai utilizar para considerar uma tantativa errada
+    i = 0
     for letra in palavra_secreta: # loop para mostrar a letra  certa
         if tentativa == letra:
             resposta_list[i]=letra
         i = i + 1
     resposta_str = "".join(resposta_list)
-    print("valor de resposta actual", resposta_str)
+    print(resposta_str)
     if resposta_old == resposta_str:
         falha = falha + 1
         boneco(falha)
     if resposta_str == palavra_secreta:
-        print("Parabéns, Ganhou!!")
+        print("Parabéns, Ganhou!! A palavra secreta era: {}".format(palavra_secreta))
         break
     # Contar os erros 
-    
