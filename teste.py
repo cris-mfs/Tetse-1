@@ -75,3 +75,5 @@ while falha < 5:
     if resposta_str == palavra_secreta:
         print("Parabéns, Ganhou!!")
         break
+    # Contar os erros 
+    
