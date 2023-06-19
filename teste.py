@@ -46,20 +46,23 @@ def boneco(numero):
 
 import random
 
-lista_palavras = ["batata","gnar","mialgia"]
+print("Bem-vindo ao jogo da forca Edição Frutas!")
+print("Terá que adivinhar a palavra secreta que será o nome de uma fruta deliciosa. Terá apenas 5 tentativas para acertar.")
+lista_palavras = ["banama","pêra","maçã", "abacate", "tomate"]
 palavra_secreta = random.sample(lista_palavras,1)[0].lower()
 # Mostrar palavra secreta com espaços em branco
 resposta_str = ""
 for i in range(len(palavra_secreta)):
     resposta_str = resposta_str + "_"
 resposta_list = list(resposta_str)
-print("Aqui vai uma dica! A palavra secreta tem {} letras!\n{}".format(len(palavra_secreta),resposta_str))
+print("Antes de começar, aqui vai uma dica. A palavra secreta tem {} letras!\n{}".format(len(palavra_secreta),resposta_str))
 
 falha = 0
-#historico_tentativas = []
+historico_tentativas = []
 while falha < 5:
     tentativa = str(input("Escreva uma letra: ")).lower() #
     tentativa = tentativa[0] # caso o utilizador escreva mais que uma letra, apenas utilizar a primeira letra
+    historico_tentativas.append(tentativa)
     resposta_old = "".join(resposta_list) # cria a variavel que vai utilizar para considerar uma tantativa errada
     i = 0
     for letra in palavra_secreta: # loop para mostrar a letra  certa
@@ -68,10 +71,10 @@ while falha < 5:
         i = i + 1
     resposta_str = "".join(resposta_list)
     print(resposta_str)
+    print("Letras já escolhidas: ", historico_tentativas)
     if resposta_old == resposta_str:
         falha = falha + 1
         boneco(falha)
     if resposta_str == palavra_secreta:
         print("Parabéns, Ganhou!! A palavra secreta era: {}".format(palavra_secreta))
         break
-    # Contar os erros 
