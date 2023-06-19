@@ -4,7 +4,7 @@ def boneco(numero):
     resto = 5 - numero
     if numero == 1:
         boneco = """
-        o
+        oo
         
         
             """ 
