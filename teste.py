@@ -137,7 +137,7 @@ import random
 
 print("Bem-vindo ao jogo da forca Edição Frutas!")
 print("Terá que adivinhar a palavra secreta que será o nome de uma fruta deliciosa. Terá apenas 5 tentativas para acertar.")
-lista_palavras = ["banama","pêra","maçã", "abacate", "tomate"]
+lista_palavras = ["banana","pêra","maçã", "abacate", "tomate", "uva", "cereja", "morango", "mirtilo"]
 palavra_secreta = random.sample(lista_palavras,1)[0].lower()
 # Mostrar palavra secreta com espaços em branco
 resposta_str = ""
