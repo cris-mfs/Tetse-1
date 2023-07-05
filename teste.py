@@ -60,7 +60,7 @@ def boneco(numero):
 ¶¶¶¶¶¶¶¶¶´´´´´¶¶¶¶¶¶¶¶´´´´¶¶¶¶¶¶¶´´´´¶¶¶¶¶¶¶¶´´´´´´¶¶¶¶¶¶¶¶
             """ 
         print(boneco)
-        print("Tente novamente. Restam-lhe {} tentativa!".format(resto))  
+        print("Tente novamente. Restam-lhe {} tentativas!".format(resto))  
     elif numero == 4:
         boneco = """
 ´´´´´´´´´´´´´´´´´´´ ¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶´´´´´´´´´´´´´´´´´´´`
@@ -92,7 +92,7 @@ def boneco(numero):
 ´´´´´´´´´´´´¶¶¶¶¶´¶¶´´´¶¶¶¶¶¶¶¶¶¶¶¶¶´´´¶¶´¶¶¶¶¶´´´´´´´´´´´´
             """ 
         print(boneco)
-        print("Tente novamente. Restam-lhe {} tentativas!".format(resto))
+        print("Tente novamente. Restam-lhe {} tentativa!".format(resto))
     elif numero == 5:
         boneco = """
 ´´´´´´´´´´´´´´´´´´´ ¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶´´´´´´´´´´´´´´´´´´´`
